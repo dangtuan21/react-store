@@ -2,6 +2,7 @@ import ApiResponseHandler from '../apiResponseHandler';
 import AuthService from '../../services/auth/authService';
 
 export default async (req, res, next) => {
+  console.log('signing in...');
   try {
     const payload = await AuthService.signin(
       req.body.email,
